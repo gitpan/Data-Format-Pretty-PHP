@@ -10,7 +10,9 @@ require Exporter;
 our @ISA = qw(Exporter);
 our @EXPORT_OK = qw(format_pretty);
 
-our $VERSION = '0.01'; # VERSION
+our $VERSION = '0.02'; # VERSION
+
+sub content_type { "application/x-httpd-php-source" }
 
 sub format_pretty {
     my ($data, $opts) = @_;
@@ -30,7 +32,7 @@ Data::Format::Pretty::PHP - Pretty-print data structure as PHP code
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 SYNOPSIS
 
@@ -53,7 +55,7 @@ This module uses L<Data::Dump::PHP> to encode data as PHP code.
 
 =head2 format_pretty($data, \%opts)
 
-Return formatted data structure as JSON. Currently there are no known formatting
+Return formatted data structure. Currently there are no known formatting
 options.
 
 =head1 SEE ALSO
@@ -68,7 +70,7 @@ Steven Haryanto <stevenharyanto@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by Steven Haryanto.
+This software is copyright (c) 2012 by Steven Haryanto.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
